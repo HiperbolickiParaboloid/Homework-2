@@ -1,33 +1,31 @@
-htmlString = '<h1 href="https://www.w3schools.com">this is a header1</h1> <h2>this is a medium header</h2> <h1>this is a header2</h1>'
+htmlString = '<h1 href="https://www.w3schools.com"><a>this is a header1</a></h1> <h2>this is a medium header</h2> <h1>this is a header2</h1> <h2>this is a header2</h2>'
 hoptag = 'h1'
 
 def getTagContent(html,tag):
     def endswith(string):
-        return not string.endswith('>')
+        return string.endswith('</')
 
     def strip(string):
         novi_string = string.strip()
         return novi_string
 
-    def count(string):
-        if string.count(tag) == 0:
-            return False
+    def find(string):
+        x = string.find('>')
+        y=x+1
+        if x >=0:
+            return string[y:]
         else:
-            return True
+            return string
 
-    def split(string):
-        novi_string = string.split('>')
-        return novi_string
+    def length(string):
+        d = len(string)-2
+        return string[:d]
 
-    def izdvoji_poslednji_element(lista):
-        return lista[1]
-
-    x = html.split('<')
+    x = html.split(tag+'>')
     c = list(map(strip,x))
     y = list(filter(endswith, c))
-    z = list(filter(count, y))
-    o = list(map(split, z))
-    r = list(map(izdvoji_poslednji_element, o))
-    print(r)
+    z = list(map(find, y))
+    o = list(map(length, z))
+    print (o)
 
 getTagContent(htmlString,hoptag)
