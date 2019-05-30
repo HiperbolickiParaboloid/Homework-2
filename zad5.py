@@ -30,14 +30,4 @@ def getTagContent(html,tag):
     r = list(map(izdvoji_poslednji_element, o))
     print(r)
 
-'''c = list(map(strip,x))
-y = list(filter(endswith, c))
-z = list(filter(count, y))
-o = list(map(split, z))
-r = list(map(izdvoji_poslednji_element, o))'''
-#print(c)
-#print(y)
-#print(z)
-#print(o)
-#print(r)
 getTagContent(htmlString,hoptag)
