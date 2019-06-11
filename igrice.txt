@@ -1,0 +1,11 @@
+GTA Vice City;8.85;2003;Rockstar Games;action adventure;
+Half Life;9.04;1998;Sierra Entertainment;action;
+Minecraft;7.65;2009;Mojang AB;adventure fantasy;
+The Sims;7.9;2000;Maxis;simulation;
+NHL 2001;6.64;2000;EA Sports;sports action;
+F1 2002;7.38;2002;EA Sports;sports simulation;
+Far Cry;8.03;2004;Ubisoft;action fantasy;
+Need For Speed;8.67;2005;EA Games;simulation adventure;
+PES 2013;6.62;2012;Konami;sports simulation;
+NBA Live 2005;8.57;2004;EA sports;sports;
+GTA San Andreas;9.5;2005;Rockstar Games;action adventure;
