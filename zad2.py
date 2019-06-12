@@ -7,6 +7,9 @@ def funkcija_filter(y): #vraca prirodne brojeve
     else:
         return False
 
+def funkcija_reduce(x,y): #sumira
+    return x+y
+
 def MAPP(funk, iterab): #realizovana MAP funkcija
     for x in range (0, len(iterab)):
         iterab[x] = funk(iterab[x])
@@ -21,9 +24,16 @@ def FILTERR(funk, iterab): #realizovana FILTER funkcija
             continue
     return new_iterab
 
-filter_lista = (-2,4,0,6,-7,8)
-nova_lista_filter = FILTERR(funkcija_filter, filter_lista)
-print(nova_lista_filter)
+def REDUCEE(funk, iterab):  #realizovana REDUCE funkcija
+    y = iterab[0]
+    for x in iterab[1:]:
+        y = funk(y, x)
+    return y
+
 lista = [1,2,3,4,5]
-nova_lista = MAPP(funkcija_map, lista)
-print(nova_lista)
+filter_final = FILTERR(funkcija_filter, lista)
+print(filter_final)
+map_final = MAPP(funkcija_map, lista)
+print(map_final)
+reduce_final = REDUCEE(funkcija_reduce, lista)
+print(reduce_final)
